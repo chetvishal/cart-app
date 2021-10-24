@@ -28,7 +28,7 @@ export const ProdCard = ({ data }) => {
                 >{includesInCard ? "GO TO CART" : "ADD TO CART"}</span>
                 <span
                     className={styles.productCard__actions__item}
-                    onClick={() => dispatch({ type: 'ADD_TO_SAVED', payload: data })}
+                    // onClick={() => dispatch({ type: 'ADD_TO_SAVED', payload: data })}
                 >{includesInSaved ? "SAVED" : "SAVE"}</span>
             </div>
         </div>
