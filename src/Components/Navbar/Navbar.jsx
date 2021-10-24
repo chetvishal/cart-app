@@ -10,13 +10,10 @@ export const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar}`}>
-            <span>LOGO</span>
+            <span>MyCart</span>
             <ul className={`${styles.navbar__list}`}>
                 <li className={`${styles.navbar__list__item}`} onClick={() => navigate('/cart')}>
                     Cart {cart.length !== 0 ? cart.length : ""}
-                </li>
-                <li className={`${styles.navbar__list__item}`}>
-                    Saved
                 </li>
             </ul>
         </nav>

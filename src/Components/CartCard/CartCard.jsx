@@ -3,11 +3,10 @@ import { useDataContext } from '../../Context/DataContext';
 
 export const CartCard = ({ data }) => {
 
-    const { name, image, id } = data.productData;
+    const { name, image, id, price } = data.productData;
     const { quantity } = data;
     const { dispatch, state } = useDataContext();
     const { cart, saved } = state;
-    const includesInCard = cart.find(item => item.productData.id === id)
     const includesInSaved = saved.find(item => item.productData.id === id)
 
     return (
@@ -21,6 +20,7 @@ export const CartCard = ({ data }) => {
             </div>
             <div className={styles.productCard__details}>
                 <span>{name}</span>
+                <h3>Rs.{price}</h3>
             </div>
             <div className={styles.productCard__actions}>
                 <span

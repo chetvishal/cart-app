@@ -1,5 +1,7 @@
 .productCard {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: inline-block;
   max-width: 16.25rem;
   margin: 0.3rem 0.5rem;

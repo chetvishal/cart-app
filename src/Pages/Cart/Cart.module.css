@@ -1,0 +1,10 @@
+.cart__Total {
+    border: 1px solid black;
+    width: 30%;
+    margin: 1rem auto;
+}
+
+.cart__TotalSection {
+    display: flex;
+    justify-content: space-around;
+}
