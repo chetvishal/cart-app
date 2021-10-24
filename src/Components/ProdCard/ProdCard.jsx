@@ -1,21 +1,35 @@
 import styles from './ProdCard.module.css';
+import { useDataContext } from '../../Context/DataContext';
 
-export const ProdCard = () => {
+export const ProdCard = ({ data }) => {
+
+    const { name, image } = data;
+    const { dispatch, state } = useDataContext();
+    const { cart, saved } = state;
+    const includesInCard = cart.find(item => item.productData.id === data.id)
+    const includesInSaved = saved.find(item => item.id === data.id)
+
     return (
         <div className={styles.productCard}>
             <div className={styles.productCard__imageContainer}>
                 <img
-                    src="https://rukminim1.flixcart.com/image/880/1056/krayqa80/sweatshirt/s/f/s/m-cz2426-010-nike-original-imag54gyexjtszdg.jpeg?q=50"
+                    src={image}
                     alt="productimage"
                     className={styles.productCard__image}
                 />
             </div>
             <div className={styles.productCard__details}>
-                <span>Full Sleeve Solid Men Sweatshirt</span>
+                <span>{name}</span>
             </div>
             <div className={styles.productCard__actions}>
-                <span className={styles.productCard__actions__item}>ADD TO CART</span>
-                <span className={styles.productCard__actions__item}>SAVE</span>
+                <span
+                    className={styles.productCard__actions__item}
+                    onClick={() => dispatch({ type: 'ADD_TO_CART', payload: data })}
+                >{includesInCard ? "GO TO CART" : "ADD TO CART"}</span>
+                <span
+                    className={styles.productCard__actions__item}
+                    onClick={() => dispatch({ type: 'ADD_TO_SAVED', payload: data })}
+                >{includesInSaved ? "SAVED" : "SAVE"}</span>
             </div>
         </div>
     )

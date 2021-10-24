@@ -1,6 +1,8 @@
 .productCard {
   border: 1px solid black;
   display: inline-block;
+  max-width: 16.25rem;
+  margin: 0.3rem 0.5rem;
 }
 
 .productCard__image__container {
@@ -8,18 +10,19 @@
 
 .productCard__image {
   max-width: 16.25rem;
+  max-height: 19rem;
 }
 
 .productCard__details {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .productCard__actions {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
 }
 
 .productCard__actions__item {
-    font-weight: bold;
+  font-weight: bold;
 }
