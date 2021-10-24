@@ -1,0 +1,22 @@
+.navbar {
+    border: 1px solid black;
+    display: flex;
+    align-items:center;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+.navbar__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 0;
+
+}
+
+.navbar__list__item {
+    display: inline-block;
+    /* border: 1px solid black; */
+    margin: 0 0.5rem;
+}
