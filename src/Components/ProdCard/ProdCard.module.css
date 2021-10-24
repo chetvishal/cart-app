@@ -1,0 +1,25 @@
+.productCard {
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.productCard__image__container {
+}
+
+.productCard__image {
+  max-width: 16.25rem;
+}
+
+.productCard__details {
+    padding: 1rem;
+}
+
+.productCard__actions {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.productCard__actions__item {
+    font-weight: bold;
+}
